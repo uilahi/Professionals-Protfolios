@@ -7,3 +7,6 @@ class Blog(models.Model):
     date_published = models.DateTimeField()
     image = models.ImageField(upload_to='images/')
     body = models.TextField()
+
+    def __str__(self):
+        return self.title

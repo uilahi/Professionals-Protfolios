@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,8 +45,10 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link " href="#">Twitter </a>
-      <a class="nav-item nav-link" href="#">Resume</a>
-      <a class="nav-item nav-link" href="#">Blog</a>
+      <a class="nav-item nav-link" href="{% static 'Resume.pdf'%}">Resume</a>
+      <a class="nav-item nav-link "  href="\blog\">Blog</a>
+            <a class="nav-item nav-link active "  href="http://127.0.0.1:8000/">Home</a>
+
       <!--<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
     </div>
   </div>
@@ -54,13 +57,23 @@
 </header>
 
 <main role="main">
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-5 font-italic d-inline-block mb-2 text-success">Umair's Protfolio</h1>
+      <p class="lead my-3">A professional portfolio provides potential employers with a complete picture of a job candidate's abilities. A professional portfolio should include your experience, accomplishments, skills, education, interests, and professional goals and objectives. </p>
+    </div>
+  </div>
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Hi, I'm Umair. </h1>
-      <p class="lead text-muted"> I like to create websites with Django. This is my 2nd website.Python is famous for having human-readable code, and that's an advantage if you want your site to rank high in search results. With Django, you can generate readable website URLs and links using the most relevant keywords and search engine optimization (SEO) best practices. </p>
+      <h1 class="jumbotron-heading">Hi, I'm Umair. </h1><br>
+
+        <img class="img-fluid" src="{% static 'ProfilePicture.PNG' %}" height=300 width=400 />
+      <br><br>
+      <p class="lead my-3 fg-black" > I like to create websites with Django. This is my 2nd website.Python is famous for having human-readable code, and that's an advantage if you want your site to rank high in search results. With Django, you can generate readable website URLs and links using the most relevant keywords and search engine optimization (SEO) best practices. </p>
       <p>
         <a href="mailto:26513umair@gmail.com" class="btn btn-primary my-2">Email Me</a>
+
       </p>
 
     </div>
@@ -87,7 +100,7 @@
   </div>
 
 </main>
-
+  </body>
 <footer class="text-muted">
   <div class="container text-centre">
     <p>
