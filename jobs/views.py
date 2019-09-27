@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from jobs.models import Job
+from Python_Django.protfolio_second_project.jobs.models import Job
 
 def home(request):
     jobs = Job.objects
