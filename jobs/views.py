@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/root/python_workspace/')
 from django.shortcuts import render
 from jobs.models import Job
 
